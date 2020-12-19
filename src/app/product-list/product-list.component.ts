@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import PRODUCTS from '../../sample_products.json';
-import moment from 'moment';
+import {ProductService} from '../product.service';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -8,11 +8,12 @@ import moment from 'moment';
 })
 export class ProductListComponent implements OnInit {
   products = [];
-  constructor() {
-    this.products = PRODUCTS.map(p => ({...p, tagsCSV: p.tags.join(', '), formattedDate: moment(p.issue_date).format('DD MMM YYYY')}));
+
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
+    this.productService.filterEvent$.subscribe(filteredProducts => this.products = [...filteredProducts]);
   }
 
 }

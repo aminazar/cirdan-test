@@ -1,3 +1,9 @@
-<div class="basic-container">
-<app-product-list></app-product-list>
+<div class="basic-container" fxLayout="column">
+  <div>
+  <mat-form-field style="width:100%">
+    <mat-label aria-label="search">Search</mat-label>
+    <input matInput placeholder="Product ISIN / tag" #search (keyup)="changeSearch()" type="text" name="Search">
+  </mat-form-field>
+  </div>
+  <app-product-list></app-product-list>
 </div>
