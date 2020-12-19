@@ -1,0 +1,50 @@
+[
+  {
+    "isin": "ISIN_TECH1",
+    "issue_date": "20180101",
+    "tags": [
+      "tech",
+      "technology",
+      "innovation"
+    ],
+    "components": [
+      {
+        "type": "ZC",
+        "value": 12.5,
+        "start_date": "20180101",
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "isin": "ISIN_TECH2",
+    "issue_date": "20180101",
+    "tags": [
+      "tech",
+      "technology",
+      "innovation"
+    ],
+    "components": [
+      {
+        "type": "ZC",
+        "value": 12.5,
+        "start_date": "20180101",
+        "quantity": 100
+      },
+      {
+        "type": "ZC",
+        "value": 12.5,
+        "start_date": "20180101",
+        "quantity": 100
+      },
+      {
+        "type": "CB",
+        "tickers": [
+          "ABC",
+          "DEF"
+        ],
+        "start_date": "20180101"
+      }
+    ]
+  }
+]

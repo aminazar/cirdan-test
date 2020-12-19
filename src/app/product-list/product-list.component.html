@@ -1,1 +1,24 @@
-<p>product-list works!</p>
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel *ngFor="let product of products">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong>ISIN:</strong> <span>{{product?.isin}}</span>
+      </mat-panel-title>
+      <mat-panel-description>
+
+        <div fxLayout="row" fxFlex="100"
+             fxLayoutGap="10px">
+          <div fxLayout="row" fxFlex="50"
+               fxLayoutGap="5px">
+            <div fxFlex="5" style="font-size: 150%; padding:0 10px;opacity:.5">#</div>
+            <div fxFlex="90" style="font-size:75%">{{product?.tagsCSV}}</div>
+          </div>
+          <div style="text-align: right" fxFlex="50"><strong>ISSUE DATE:</strong> {{product?.formattedDate}}</div>
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>test</p>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
